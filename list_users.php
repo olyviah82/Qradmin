@@ -575,6 +575,7 @@
                                              <th>Fullname</th>
                                              <th>Email Address</th>
                                              <th>Phone Number</th>
+                                             <th>Role</th>
                                              <th>Enable/Disable</th>
                                              <th>Edit</th>
                                              <th>Delete</th>
@@ -605,38 +606,53 @@
                                              <td> <span class="block-email"><?= $user->displayName; ?></span></td>
                                              <td class="desc"><?= $user->email; ?></td>
                                              <td><span class="block-email"><?= $user->phoneNumber; ?></span></td>
-                                             <td>
-                                                 <?php
-                                                        if ($user->disabled) {
-                                                            echo 'Disabled';
-                                                        } else {
-                                                            echo 'Enabled';
-                                                        }
-                                                        ?>
-                                             </td>
+                                             < <td>
 
-                                             <!-- <td>
+                                                 <span class="block-email">
+                                                     <?php
+                                                            $claims = $auth->getUser($user->uid)->customClaims;
+                                                            if (isset($claims['admin']) == true) {
+                                                                echo "Admin";
+                                                            } elseif (isset($claims['super_admin']) == true) {
+                                                                echo "Super Admin";
+                                                            } elseif ($claims == null) {
+                                                                echo "User";
+                                                            }
+                                                            ?>
+                                                     <span>
+                                                         </td>
+                                                         <td>
+                                                             <?php
+                                                                    if ($user->disabled) {
+                                                                        echo 'Disabled';
+                                                                    } else {
+                                                                        echo 'Enabled';
+                                                                    }
+                                                                    ?>
+                                                         </td>
+
+                                                         <!-- <td>
                                                  
 
                                                  <a href="user_edit.php" data-toggle="tooltip"
                                                      data-placement="top" Class="item"><i
                                                          class="zmdi zmdi-edit"></i>Enable/Disable </a>
                                              </td> -->
-                                             <td>
+                                                         <td>
 
-                                                 <a href="user_edit.php?id=<?= $user->uid; ?>" data-toggle="tooltip"
-                                                     data-placement="top" Class="item"><i
-                                                         class="zmdi zmdi-edit"></i>Edit </a>
-                                             </td>
-                                             <td>
-                                                 <form method="POST" action="code.php">
-                                                     <button class="item" type="submit" name="delete_user"
-                                                         value="<?= $user->uid; ?>">Delete</button>
+                                                             <a href="user_edit.php?id=<?= $user->uid; ?>"
+                                                                 data-toggle="tooltip" data-placement="top"
+                                                                 Class="item"><i class="zmdi zmdi-edit"></i>Edit </a>
+                                                         </td>
+                                                         <td>
+                                                             <form method="POST" action="code.php">
+                                                                 <button class="item" type="submit" name="delete_user"
+                                                                     value="<?= $user->uid; ?>">Delete</button>
 
 
-                                                 </form>
+                                                             </form>
 
-                                             </td>
+                                                         </td>
                                          </tr>
                                          <?php
                                             }

@@ -512,14 +512,16 @@ include('authentication.php')
         </div>
         <!-- END HEADER MOBILE -->
         <div class="container">
-            <div class="row">
+            <?php
+            if (isset($_SESSION['status'])) {
+                echo "<h5 class='sufee-alert alert with-close alert-secondary alert-dismissible fade show'>" . $_SESSION['status'] . "</h5>";
+                unset($_SESSION['status']);
+            }
+            ?>
+            <div class="row justify-content-center">
                 <div class=" col-md-6 ">
                     <div class="login-content">
-                        <div class="login-logo">
-                            <a href="dashboard.php">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
-                            </a>
-                        </div>
+
                         <div class="login-form">
                             <?php
                             include('dbconn.php');
@@ -574,8 +576,6 @@ include('authentication.php')
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-md-6">
 
                     <div class="card">
@@ -622,6 +622,108 @@ include('authentication.php')
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Change Password </h4>
+
+                        </div>
+                        <div class="card-body">
+                            <form action="code.php" method="post">
+                                <?php
+                                include('dbconn.php');
+                                if (isset($_GET['id'])) {
+
+                                    $uid = $_GET['id'];
+                                    try {
+                                        $user = $auth->getUser($uid);
+                                ?>
+                                <input type="hidden" name="change_pw_user_id" value="<?= $uid; ?>">
+                                <div class="from-group">
+                                    <label>New Password </label>
+                                    <input type="text" name="newpassword" class=" au-input au-input--full" required>
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password </label>
+                                    <input type="text" name="confirmpassword" class="au-input au-input--full" required>
+
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="change_password_btn"
+                                        class="btn btn-warning">Submit</button>
+
+                                </div>
+                                <?php
+                                    } catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
+                                        echo $e->getMessage();
+                                    }
+                                }
+                                ?>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Custom User Claims</h4>
+                        </div>
+                        <div class="card_body">
+                            <form action="code.php" method="post">
+                                <?php
+                                if (isset($_GET['id'])) {
+                                    $uid = $_GET['id'];
+                                ?>
+                                <input type="hidden" name="claims_user_id" value="<?= $uid; ?>">
+                                <div class="form-group">
+
+                                    <div class="form-group mb-3">
+                                        <select name="role_as" class="form-control" id="">
+                                            <option value="">Select Roles</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="super_admin">Super Admin</option>
+                                            <option value="norole">Remove Role</option>
+                                        </select>
+                                    </div>
+                                    <label for="">Currentlyt:user role is </label>
+
+                                    <h4 class="border bg-warning p-2">
+                                        <?php
+                                            $claims = $auth->getUser($uid)->customClaims;
+                                            if (isset($claims['admin']) == true) {
+                                                echo "Role :Admin";
+                                            } elseif (isset($claims['super_admin']) == true) {
+                                                echo "Role :Super Admin";
+                                            } elseif ($claims == null) {
+                                                echo "Role :No role";
+                                            }
+                                            ?>
+                                    </h4>
+                                    <div class="form-group mb-3"></div>
+                                    <button type="submit" class="btn btn-secondary"
+                                        name="user_claims_btn">Submit</button>
+
+
+                                </div>
+                                <?php
+
+                                }
+                                ?>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

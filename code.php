@@ -1,7 +1,57 @@
 <?php
 session_start();
 include('dbconn.php');
+if (isset($_POST['user_claims_btn'])) {
+    $uid = $_POST['claims_user_id'];
+    $roles = $_POST['role_as'];
 
+    if ($roles == 'admin') {
+        $auth->setCustomUserClaims($uid, ['admin' => true]);
+        $msg = "User Role as Admin";
+    } elseif ($roles == 'super_admin') {
+
+        $auth->setCustomUserClaims($uid, ['super_admin' => true]);
+        $msg = "Roles as SuperAdmin";
+    } elseif ($roles == 'norole') {
+        $auth->setCustomUserClaims($uid, null);
+        $msg = "User Role is Removed";
+    }
+    if ($msg) {
+        $_SESSION['status'] = "$msg ";
+        header("Location:user_edit.php?id=$uid");
+        exit();
+    } else {
+        $_SESSION['status'] = "Something went wrong";
+        header("Location:user_edit.php?id=$uid");
+        exit();
+    }
+}
+
+
+
+
+if (isset($_POST['change_password_btn'])) {
+    $newpassword = $_POST['newpassword'];
+    $confirmpassword = $_POST['confirmpassword'];
+    $uid = $_POST['change_pw_user_id'];
+
+    if ($newpassword == $confirmpassword) {
+        $updatedUser = $auth->changeUserPassword($uid, $newpassword);
+        if ($updatedUser) {
+            $_SESSION['status'] = "password updated ";
+            header("Location:list_users.php");
+            exit();
+        } else {
+            $_SESSION['status'] = "Something Went Wrong";
+            header("Location:list_users.php");
+            exit();
+        }
+    } else {
+        $_SESSION['status'] = "New password does not match confirm password";
+        header("Location:user_edit.php?id=$uid");
+        exit();
+    }
+}
 
 if (isset($_POST['enable_disable_ac'])) {
 
