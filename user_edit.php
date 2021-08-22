@@ -53,7 +53,13 @@ include('authentication.php')
                         </a>
                     </div>
                     <div class="header__navbar">
-                        <ul class="list-unstyled">
+                    <ul>
+                    <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
+						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
+						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
+						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
+					</ul>
+                        <!-- <ul class="list-unstyled">
                             <li class="has-sub">
                                 <a href="#">
                                     <i class="fas fa-tachometer-alt"></i>Dashboard
@@ -140,7 +146,7 @@ include('authentication.php')
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <div class="header__tool">
                         <div class="header-button-item has-noti js-item-menu">

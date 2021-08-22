@@ -1,4 +1,4 @@
- <?php
+<?php
     include('authentication.php')
 
     ?>
@@ -16,7 +16,7 @@
      <meta name="keywords" content="au theme template">
 
      <!-- Title Page-->
-     <title>Dashboard 3</title>
+     <title>QR CODE Admin</title>
 
      <!-- Fontfaces CSS-->
      <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -53,9 +53,15 @@
                          </a>
                      </div>
                      <div class="header__navbar">
-                         <ul class="list-unstyled">
-                             <li class="has-sub">
-                                 <a href="#">
+                         
+                         <ul>
+                         <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
+						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
+						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
+						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
+					</ul>
+                             <!-- <li class="has-sub"> -->
+                                 <!-- <a href="#">
                                      <i class="fas fa-tachometer-alt"></i>Dashboard
                                      <span class="bot-line"></span>
                                  </a>
@@ -82,12 +88,12 @@
                              <li>
                                  <a href="table.html">
                                      <i class="fas fa-trophy"></i>
-                                     <span class="bot-line"></span>Features</a>
-                             </li>
-                             <li class="has-sub">
+                                     <span class="bot-line"></span>Features</a> -->
+                             <!-- </li> -->
+                             <!-- <li class="has-sub">
                                  <a href="#">
                                      <i class="fas fa-copy"></i>
-                                     <span class="bot-line"></span>Pages</a>
+                                     <a href = "login.php " span class="bot-line"></span>Login</a>
                                  <ul class="header3-sub-list list-unstyled">
                                      <li>
                                          <a href="login.php">Login</a>
@@ -99,8 +105,8 @@
                                          <a href="forget-pass.html">Forget Password</a>
                                      </li>
                                  </ul>
-                             </li>
-                             <li class="has-sub">
+                             </li> -->
+                             <!-- <li class="has-sub">
                                  <a href="#">
                                      <i class="fas fa-desktop"></i>
                                      <span class="bot-line"></span>UI Elements</a>
@@ -138,9 +144,9 @@
                                      <li>
                                          <a href="typo.html">Typography</a>
                                      </li>
-                                 </ul>
-                             </li>
-                         </ul>
+                                 </ul> -->
+                             <!-- </li> -->
+                        
                      </div>
                      <div class="header__tool">
                          <div class="header-button-item has-noti js-item-menu">
@@ -583,7 +589,7 @@
                                  <h2 class="number">
                                      <?php echo $totalcount; ?>
                                  </h2>
-                                 <span class="desc"><a href="list_users.php">Number of Registered Contacts</a></span>
+                                 <span class="desc"><a href="list_users.php">Number of Registered Students</a></span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-account-o"></i>
                                  </div>
@@ -591,8 +597,8 @@
                          </div>
                          <div class="col-md-6 col-lg-3">
                              <div class="statistic__item statistic__item--orange">
-                                 <h2 class="number">388,688</h2>
-                                 <span class="desc">items sold</span>
+                                 <h2 class="number">8,156</h2>
+                                 <span class="desc">Total Number of Campus Students</span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-shopping-cart"></i>
                                  </div>
@@ -600,8 +606,8 @@
                          </div>
                          <div class="col-md-6 col-lg-3">
                              <div class="statistic__item statistic__item--blue">
-                                 <h2 class="number">1,086</h2>
-                                 <span class="desc">this week</span>
+                                 <h2 class="number"></h2>
+                                 <span class="desc"></span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-calendar-note"></i>
                                  </div>
@@ -609,8 +615,8 @@
                          </div>
                          <div class="col-md-6 col-lg-3">
                              <div class="statistic__item statistic__item--red">
-                                 <h2 class="number">$1,060,386</h2>
-                                 <span class="desc">total earnings</span>
+                                 <h2 class="number"></h2>
+                                 <span class="desc"></span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-money"></i>
                                  </div>
@@ -638,8 +644,8 @@
                                      <canvas id="widgetChart5"></canvas>
                                  </div>
                                  <div class="statistic-chart-1-note">
-                                     <span class="big">10,368</span>
-                                     <span>/ 16220 items sold</span>
+                                     <span class="big">7</span>
+                                     <span>/ 8156 Students Registered</span>
                                  </div>
                              </div>
                              <!-- END CHART-->
@@ -647,29 +653,37 @@
                          <div class="col-md-6 col-lg-4">
                              <!-- TOP CAMPAIGN-->
                              <div class="top-campaign">
-                                 <h3 class="title-3 m-b-30">top campaigns</h3>
+                                 <h3 class="title-3 m-b-30">Faculties and Schools</h3>
                                  <div class="table-responsive">
                                      <table class="table table-top-campaign">
                                          <tbody>
                                              <tr>
-                                                 <td>1. Australia</td>
-                                                 <td>$70,261.65</td>
+                                                 <td>1. Strathmore Business School</td>
+                                                 <td>29.25%</td>
                                              </tr>
                                              <tr>
-                                                 <td>2. United Kingdom</td>
-                                                 <td>$46,399.22</td>
+                                                 <td>2. Strathmore Law School</td>
+                                                 <td>21.23%</td>
                                              </tr>
                                              <tr>
-                                                 <td>3. Turkey</td>
-                                                 <td>$35,364.90</td>
+                                                 <td>3. School of Computing and Engineering Sciences</td>
+                                                 <td>19.78%</td>
                                              </tr>
                                              <tr>
-                                                 <td>4. Germany</td>
-                                                 <td>$20,366.96</td>
+                                                 <td>4. Strathmore Institute of Mathematical Sciences </td>
+                                                 <td>18.45%</td>
                                              </tr>
                                              <tr>
-                                                 <td>5. France</td>
-                                                 <td>$10,366.96</td>
+                                                 <td>5. School of Humanities and Social Sciences</td>
+                                                 <td>11.29%</td>
+
+                                                 <!-- <td>6. Strathmore Institute of Management and Technology</td>
+                                                 <td></td> -->
+
+                                                 <!--
+
+                                                 <td>7. School of Tourism and Hospitality</td>
+                                                 <td></td> -->
                                              </tr>
                                          </tbody>
                                      </table>
@@ -690,11 +704,11 @@
                                  <div class="chart-info">
                                      <div class="chart-note">
                                          <span class="dot dot--blue"></span>
-                                         <span>products</span>
+                                         <span>Full-Time</span>
                                      </div>
                                      <div class="chart-note">
                                          <span class="dot dot--red"></span>
-                                         <span>Services</span>
+                                         <span>Evening</span>
                                      </div>
                                  </div>
                              </div>
@@ -837,18 +851,18 @@
              <!-- END DATA TABLE-->
 
              <!-- COPYRIGHT-->
-             <section class="p-t-60 p-b-20">
+             <!-- <section class="p-t-60 p-b-20">
                  <div class="container">
                      <div class="row">
                          <div class="col-md-12">
                              <div class="copyright">
                                  <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
                                          href="https://colorlib.com">Colorlib</a>.</p>
-                             </div>
-                         </div>
+                             </div> -->
+                         <!-- </div>
                      </div>
                  </div>
-             </section>
+             </section>  -->
              <!-- END COPYRIGHT-->
          </div>
 
