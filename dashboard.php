@@ -14,6 +14,12 @@
      <meta name="description" content="au theme template">
      <meta name="author" content="Hau Nguyen">
      <meta name="keywords" content="au theme template">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+     <script src="path/to/fusioncharts.js"></script>
+    <script src="path/to/fusioncharts.charts.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="path/to/app.js"></script>
 
      <!-- Title Page-->
      <title>QR CODE Admin</title>
@@ -564,7 +570,7 @@
                                 }
                                 ?>
                              <h1 class="title-4">Welcome back
-                                 <span>John!</span>
+                                 <span>Jane!</span>
                              </h1>
 
                              <hr class="line-seprate">
@@ -579,7 +585,7 @@
                  <div class="container">
                      <div class="row">
                          <div class="col-md-6 col-lg-3">
-                             <div class="statistic__item statistic__item--green">
+                             <div class="statistic__item statistic__item--orange">
                                  <?php
                                     include('dbconn.php');
                                     $ref_table = "Users";
@@ -596,7 +602,8 @@
                              </div>
                          </div>
                          <div class="col-md-6 col-lg-3">
-                             <div class="statistic__item statistic__item--orange">
+                             <div class="statistic__item statistic__item--green">
+                                
                                  <h2 class="number">8,156</h2>
                                  <span class="desc">Total Number of Campus Students</span>
                                  <div class="icon">
@@ -638,46 +645,141 @@
                      <div class="row">
                          <div class="col-md-6 col-lg-4">
                              <!-- CHART-->
-                             <div class="statistic-chart-1">
-                                 <h3 class="title-3 m-b-30">chart</h3>
+                             <div id="chart-container">
+
+                             <!-- <canvas id= "lineChart" height="1000" width="400">
+                            </canvas>  -->
+                            <script>
+
+                            // const CHART = document.getElementById("lineChart");
+                            // console.log(CHART);
+                            // let lineChart = new Chart(CHART, {
+                            //     type:'line', 
+                            //     data:
+                            // });
+                            function getData(callbackIN) {
+    var ref = firebase.database().ref("scanning");
+        ref.once('temp').then(function (snapshot) {
+        callbackIN(snapshot.val())
+    });
+}
+
+
+window.addEventListener("load", getData(genFunction));
+
+function genFunction(data) {
+    var cdata = [];
+    var len = data.length;
+    for(var i=1; i<len; i++) {
+        cdata.push({
+        label: data[i]['date'],
+        value: data[i]['temp']
+    });
+}
+
+var firebaseChart = new FusionCharts({
+    type: 'area2d',
+    renderAt: 'chart-container',
+    width: '650',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+    "chart": {
+        "caption": "Students Temperature Trend",
+        "subCaption": "Last 7 Days",
+        "subCaptionFontBold": "0",
+        "captionFontSize": "20",
+        "subCaptionFontSize": "17",
+        "captionPadding": "15",
+        "captionFontColor": "#8C8C8C",
+        "baseFontSize": "14",
+        "baseFont": "Barlow",
+        "canvasBgAlpha": "0",
+        "bgColor": "#FFFFFF",
+        "bgAlpha": "100",
+        "showBorder": "0",
+        "showCanvasBorder": "0",
+        "showPlotBorder": "0",
+        "showAlternateHGridColor": "0",
+        "usePlotGradientColor": "0",
+        "paletteColors": "#6AC1A5",
+        "showValues": "0",
+        "divLineAlpha": "5",
+        "showAxisLines": "1",
+        "drawAnchors": "0",
+        "xAxisLineColor": "#8C8C8C",
+        "xAxisLineThickness": "0.7",
+        "xAxisLineAlpha": "50",
+        "yAxisLineColor": "#8C8C8C",
+        "yAxisLineThickness": "0.7",
+        "yAxisLineAlpha": "50",
+        "baseFontColor": "#8C8C8C",
+        "toolTipBgColor": "#FA8D67",
+        "toolTipPadding": "10",
+        "toolTipColor": "#FFFFFF",
+        "toolTipBorderRadius": "3",
+        "toolTipBorderAlpha": "0",
+        "drawCrossLine": "1",
+        "crossLineColor": "#8C8C8C",
+        "crossLineAlpha": "60",
+        "crossLineThickness": "0.7",
+        "alignCaptionWithCanvas": "1"
+    },
+
+    "scanning": cdata
+    }
+});
+firebaseChart.render();
+
+                            </script>
+                           
+                            
+                            </div>
+                           
+                                 
+                            
+
+
+                                 
+                                 <!-- <h3 class="title-3 m-b-30">chart</h3>
                                  <div class="chart-wrap">
                                      <canvas id="widgetChart5"></canvas>
                                  </div>
                                  <div class="statistic-chart-1-note">
-                                     <span class="big">7</span>
-                                     <span>/ 8156 Students Registered</span>
+                                     <span class="big">STUDENT</span>
+                                     <span>LOGIN THIS WEEK</span>
                                  </div>
-                             </div>
+                             </div> -->
                              <!-- END CHART-->
                          </div>
                          <div class="col-md-6 col-lg-4">
                              <!-- TOP CAMPAIGN-->
                              <div class="top-campaign">
-                                 <h3 class="title-3 m-b-30">Faculties and Schools</h3>
+                                 <h3 class="title-3 m-b-30">Courses</h3>
                                  <div class="table-responsive">
                                      <table class="table table-top-campaign">
                                          <tbody>
                                              <tr>
-                                                 <td>1. Strathmore Business School</td>
+                                                 <td>1. ICS</td>
                                                  <td>29.25%</td>
                                              </tr>
                                              <tr>
-                                                 <td>2. Strathmore Law School</td>
+                                                 <td>2. BBIT </td>
                                                  <td>21.23%</td>
                                              </tr>
                                              <tr>
-                                                 <td>3. School of Computing and Engineering Sciences</td>
+                                                 <td>3. BTC</td>
                                                  <td>19.78%</td>
                                              </tr>
                                              <tr>
-                                                 <td>4. Strathmore Institute of Mathematical Sciences </td>
+                                                 <td>4. Electrical </td>
                                                  <td>18.45%</td>
                                              </tr>
                                              <tr>
-                                                 <td>5. School of Humanities and Social Sciences</td>
+                                                 <td>5. DBIT</td>
                                                  <td>11.29%</td>
 
-                                                 <!-- <td>6. Strathmore Institute of Management and Technology</td>
+                                                 <!-- <td>6. LAW</td>
                                                  <td></td> -->
 
                                                  <!--
