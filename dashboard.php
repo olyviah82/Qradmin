@@ -612,9 +612,16 @@
                              </div>
                          </div>
                          <div class="col-md-6 col-lg-3">
+
                              <div class="statistic__item statistic__item--blue">
-                                 <h2 class="number"></h2>
-                                 <span class="desc"></span>
+                             <?php
+                                    include('dbconn.php');
+                                    $ref_table = "screening";
+                                    $totalcount = $database->getReference($ref_table)->getSnapshot()->numChildren();
+
+                                    ?>
+                                 <h2 class="number"><?php echo $totalcount?></h2>
+                                 <span class="desc"><a href="screening.php">Screening Details</Details></a></span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-calendar-note"></i>
                                  </div>
