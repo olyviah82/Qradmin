@@ -9,7 +9,7 @@ $mail = $smtp->load();
 foreach (explode(",", $email) as $address) {
 
     //call phpmailerlibrary class here 
-    $mail->addAddress($address, "Hello");
+    $mail->addAddress($address);
     $mail->Subject = $subject;
     $mail->Body = $message;
     if ($mail->send()) {
