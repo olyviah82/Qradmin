@@ -1,90 +1,56 @@
-<div class="table-responsive table-responsive-data2">
-                                 <table class="table table-data2">
-                                     <thead>
-                                         <tr>
-                                             <th>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </th>
-                                             <th>si.NO</th>
-                                             <th>Fullname</th>
-                                             <th>Email Address</th>
-                                             <th>Phone Number</th>
-                                             <th>Enable/Disable</th>
-                                             <th>Edit</th>
-                                             <th>Delete</th>
-                                             <th></th>
-                                         </tr>
-                                     </thead>
-                                     <tbody>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-                                         <?php
-                                            include('dbconn.php');
-                                            // $keychild = $_GET['id'];
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-                                            $ref_table = 'Users';
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-                                            $fetchdata = $database->getReference($ref_table)->getValue();
+.dropdown-content a:hover {background-color: #ddd;}
 
-                                            if ($fetchdata > 0) {
-                                                $i = 1;
-                                                foreach ($fetchdata as $key => $row) {
-                                            ?>
-                                         <tr class="spacer"></tr>
-                                         <tr class="tr-shadow">
-                                             <td>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </td>
+.dropdown:hover .dropdown-content {display: block;}
 
-                                             <td><?= $i++; ?></td>
-                                             <td> <span class="block-email"><?= $row['email']; ?></span></td>
-                                             <td><span class="block-email"><?= $row['fullname']; ?></span></td>
-                                             <td class="desc"><?= $row['phonenumber']; ?></td>
-                                             <td>
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
 
-                                                 <a href="EditUsers.php?id=<?= $key; ?>" data-toggle="tooltip"
-                                                     data-placement="top" Class="item"><i
-                                                         class="zmdi zmdi-edit"></i>Edit </a>
-                                             </td>
-                                             <td>
+<h2>FILTER BY</h2>
 
-                                                 <a href="EditUsers.php?id=<?= $key; ?>" data-toggle="tooltip"
-                                                     data-placement="top" Class="item"><i
-                                                         class="zmdi zmdi-edit"></i>Enable/Disable </a>
-                                             </td>
-                                             <td>
+<div class="dropdown">
+  <button class="dropbtn">BUILDING</button>
+  <div class="dropdown-content">
+    <a href="stmb.php">STMB</a>
+    <a href="#">MSB</a>
+    <a href="#">PHASE-1</a>
+  </div>
+</div>
 
-                                                 <a href="DeleteUsers.php" data-toggle="tooltip" data-placement="top"
-                                                     Class="item"><i class="zmdi zmdi-delete"></i></i>Delete </a>
-                                             </td>
-                                         </tr>
-
-                                         <?php
-
-
-                                                }
-                                            } else {
-                                                ?>
-                                         <tr>
-                                             <td colspan="7">No record Found</td>
-                                         </tr>
-                                         <?php
-
-                                            }
-
-
-                                            ?>
-                                     </tbody>
-
-                                 </table>
-                                 </div>
-                         </div>
-                     </div>
-                 </div>
-             </section>
+</body>
+</html>

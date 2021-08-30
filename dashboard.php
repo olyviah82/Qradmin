@@ -14,6 +14,7 @@
      <meta name="description" content="au theme template">
      <meta name="author" content="Hau Nguyen">
      <meta name="keywords" content="au theme template">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
      <script src="path/to/fusioncharts.js"></script>
     <script src="path/to/fusioncharts.charts.js"></script>
@@ -44,6 +45,43 @@
 
      <!-- Main CSS-->
      <link href="css/theme.css" rel="stylesheet" media="all">
+
+     <style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 
  </head>
 
@@ -646,17 +684,99 @@
                  </div>
              </section>
              <!-- END STATISTIC-->
+             <section class="statistic-chart">
+                 <div class="reports">
+             <div class="dropdown">
+             <div class="col-md-12">
+             <h2 class="title-5 m-b-35">REPORTS</h2>
+                            </div>
+                            
+             <h3>FILTER BY</h3><br>
+
+  <button class="dropbtn">BUILDING</button>
+  <div class="dropdown-content">
+    <a href="stmb.php">STMB</a>
+    <a href="#">MSB</a>
+    <a href="#">PHASE-1</a>
+  </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  &nbsp;
+<div class="dropdown">
+  <button class="dropbtn">MONTH</button>
+  <div class="dropdown-content">
+    <a href="stmb.php">JANUARY</a>
+    <a href="#">FEBRUARY</a>
+    <a href="#">MARCH</a>
+    <a href="stmb.php">APRIL</a>
+    <a href="#">MAY</a>
+    <a href="#">JUNE</a>
+    <a href="stmb.php">JULY</a>
+    <a href="#">AUGUST</a>
+    <a href="#">SEPTEMBER</a>
+    <a href="stmb.php">OCTOBER</a>
+    <a href="#">NOVEMBER</a>
+    <a href="#">DECEMBER</a>
+  </div>
+</div>
+&nbsp;
+&nbsp;
+  &nbsp;
+  &nbsp;
+  &nbsp;
+<div class="dropdown">
+  <button class="dropbtn">DAY</button>
+  <div class="dropdown-content">
+    <a href="stmb.php">MONDAY</a>
+    <a href="#">TUESDAY</a>
+    <a href="#">WEDNESDAY</a>
+    <a href="stmb.php">THURSDAY</a>
+    <a href="#">FRIDAY</a>
+    <a href="#">SATURDAY</a>
+  </div>
+</div>
+&nbsp;
+  &nbsp;
+  &nbsp;
+
+&nbsp;
+  &nbsp;
+<div class="dropdown">
+  <button class="dropbtn"><input type="date" ></button>
+  
+</div>
+
+&nbsp;
+  &nbsp;
+  &nbsp;
+
+&nbsp;
+  &nbsp;
+<div class="dropdown">
+  <button class="dropbtn">TEMPERATURE</button>
+  <div class="dropdown-content">
+    <a href="stmb.php"></a>
+    <a href="#">>37.0</a>
+  </div>
+</div>
+                            </div>
+                            </section>
 
              <!-- STATISTIC CHART-->
              <section class="statistic-chart">
                  <div class="container">
+                     
                      <div class="row">
                          <div class="col-md-12">
-                             <h3 class="title-5 m-b-35">statistics</h3>
-                         </div>
+
+                             <h2 class="title-5 m-b-35">STATISCTICS</h2>
                      </div>
                      <div class="row">
+                         
                          <div class="col-md-6 col-lg-4">
+                             
                              <!-- CHART-->
                              <div id="chart-container">
 
