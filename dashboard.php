@@ -628,9 +628,15 @@
                              </div>
                          </div>
                          <div class="col-md-6 col-lg-3">
+                         <?php
+                                    include('dbconn.php');
+                                    $ref_table = "scanning";
+                                    $totalcount = $database->getReference($ref_table)->getSnapshot()->numChildren();
+
+                                    ?>
                              <div class="statistic__item statistic__item--red">
-                                 <h2 class="number"></h2>
-                                 <span class="desc"></span>
+                             <h2 class="number"><?php echo $totalcount?></h2>
+                             <span class="desc"><a href="confirm.php">Confirmed Students</Details></a></span>
                                  <div class="icon">
                                      <i class="zmdi zmdi-money"></i>
                                  </div>

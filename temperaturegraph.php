@@ -1,117 +1,109 @@
 <?php
-                                        include('dbconn.php');
+include('dbconn.php');
+ $ref_table = 'scanning';
+ $fetchdata = $database->getReference($ref_table)->getValue();
+ $temp33='33.0';
+ $tttemp33= array_count_values(array_column($fetchdata, 'temp'))[$temp33];
+ $temp33_5='33.5';
+$tttemp33_5 =array_count_values(array_column($fetchdata, 'temp'))[$temp33_5];
+$temp34='34.0';
+$tttemp34= array_count_values(array_column($fetchdata, 'temp'))[$temp34];
+$temp34_5='34.5';
+$tttemp34_5=array_count_values(array_column($fetchdata, 'temp'))[$temp34_5];
+$temp35='35.0';
+$tttemp35=array_count_values(array_column($fetchdata, 'temp'))[$temp35];
+$temp35_6='35.6';
+$ttemp35_6 =array_count_values(array_column($fetchdata, 'temp'))[$temp35_6];
+$temp36_4='36.4';
+$ttemp36_4= array_count_values(array_column($fetchdata, 'temp'))[$temp36_4];
+$temp36_9='36.9';
+$ttemp36_9=array_count_values(array_column($fetchdata, 'temp'))[$temp36_9];
+$temp37='37.0';
+$ttemp37= array_count_values(array_column($fetchdata, 'temp'))[$temp37];
+$temp37_4='37.4';
+$tttemp37_4=array_count_values(array_column($fetchdata, 'temp'))[$temp37_4];
+$total=$tttemp33*33.0+$tttemp33_5*33.5+$tttemp34*34+$tttemp34_5*34.5+$tttemp35*35.0+$ttemp35_6*35.6+$ttemp36_4*36.4+$ttemp36_9*36.9+$ttemp37*37+$tttemp37_4*37.4;
+//echo $total;
+$totalcount=$tttemp33+$tttemp33_5+$tttemp34+$tttemp34_5+$tttemp35+$ttemp35_6+$ttemp36_4+$ttemp36_9+$ttemp37+$tttemp37_4;
+$averagetemp=$total/$totalcount;
+//echo $totalcount;
+//echo $averagetemp;
 
-
-                                        $ref_table = 'screening';
-
-
-
-                                        $fetchdata = $database->getReference($ref_table)->getValue();
-
-                            
-                                        //taste 
-                                        $userId='Yes';
-                                         array_count_values(array_column($fetchdata, 'taste'))[$userId];
-                                        $No='No';
-                                     array_count_values(array_column($fetchdata, 'taste'))[$No];
-                                       $tastetotal= array_count_values(array_column($fetchdata, 'taste'))[$userId]+array_count_values(array_column($fetchdata, 'taste'))[$No];
-                                       $tasteno=array_count_values(array_column($fetchdata, 'taste'))[$No];
-                                       $tasteyes=array_count_values(array_column($fetchdata, 'taste'))[$userId];
-                                        $tastepercno=($tasteno*100)/$tastetotal;
-                                        $tastepercyes=($tasteyes*100)/$tastetotal;
-
-                                        ?>
-                                        <?php
+ ?>
+                                       
+                                       <?php
  
  $dataPoints = array( 
-     array("label"=>"People with  taste", "y"=>$tastepercyes),
-     array("label"=>"People not with taste", "y"=>$tastepercno)
-    
- )
+     array("y" => $tttemp33, "label" => "33.0" ),
+     array("y" => $tttemp33_5, "label" => "33.5" ),
+     array("y" => $tttemp34, "label" => "34.0" ),
+     array("y" => $tttemp34_5, "label" => "34.5" ),
+     array("y" => $tttemp35, "label" => "35.0" ),
+     array("y" => $ttemp35_6, "label" => "35.6" ),
+     array("y" => $ttemp36_4, "label" => "36.4" ),
+     array("y" => $ttemp36_9, "label" => "36.9" ),
+     array("y" => $ttemp37, "label" => "37.0" ),
+     array("y" => $tttemp37_4, "label" => "37.4" )
+ );
   
  ?>
  <!DOCTYPE HTML>
  <html>
  <head>
-     <!-- Required meta tags-->
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="description" content="au theme template">
- <meta name="author" content="Hau Nguyen">
- <meta name="keywords" content="au theme template">
+      <!-- Required meta tags-->
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta name="description" content="au theme template">
+     <meta name="author" content="Hau Nguyen">
+     <meta name="keywords" content="au theme template">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+     <script src="path/to/fusioncharts.js"></script>
+    <script src="path/to/fusioncharts.charts.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="path/to/app.js"></script>
 
- <!-- Title Page-->
- <title>Dashboard 3</title>
+     <!-- Title Page-->
+     <title>QR CODE Admin</title>
 
- <!-- Fontfaces CSS-->
- <link href="css/font-face.css" rel="stylesheet" media="all">
- <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
- <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
- <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+     <!-- Fontfaces CSS-->
+     <link href="css/font-face.css" rel="stylesheet" media="all">
+     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
- <!-- Bootstrap CSS-->
- <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+     <!-- Bootstrap CSS-->
+     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
- <!-- Vendor CSS-->
- <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
- <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
- <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
- <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
- <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
- <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
- <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+     <!-- Vendor CSS-->
+     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+     <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
- <!-- Main CSS-->
- <link href="css/theme.css" rel="stylesheet" media="all">
+     <!-- Main CSS-->
+     <link href="css/theme.css" rel="stylesheet" media="all">
  <script>
  window.onload = function() {
   
-  
  var chart = new CanvasJS.Chart("chartContainer", {
      animationEnabled: true,
-     title: {
-         text: "No of people who have been having taste"
+     theme: "light2",
+     title:{
+         text: "Temperature of the students "
      },
-     subtitles: [{
-         text: "Pie Chart"
-     }],
-     data: [{
-         type: "pie",
-         yValueFormatString: "#,##0.00\"%\"",
-         indexLabel: "{label} ({y})",
-         dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-     }]
- });
- chart.render();
-  
- }
- 
-  
- ?>
- </script>
- <?php 
- $dataPoints = array( 
-     array("label"=>"People with taste", "y"=>$tastepercyes),
-     array("label"=>"People with no taste", "y"=>$tastepercno)
-    
- )
- ?>
- <script>
- window.onload = function() {
-  
-  
- var chart = new CanvasJS.Chart("chartContainer", {
-     animationEnabled: true,
-     title: {
-         text: "No of people who have been Suffering from  taste"
+     axisY: {
+         title: "No. of students"
      },
-     subtitles: [{
-         text: "Pie Chart"
-     }],
+     axisx: {
+         title: "Temperature in Degrees Celsius"
+     },
      data: [{
-         type: "pie",
-         yValueFormatString: "#,##0.00\"%\"",
-         indexLabel: "{label} ({y})",
+         type: "column",
+         yValueFormatString: "#,##0.## degrees Celcsius",
          dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
      }]
  });
@@ -119,9 +111,9 @@
   
  }
  </script>
- 
  </head>
  <body>
+
  <header class="header-desktop3 d-none d-lg-block">
          <div class="section__content section__content--p35">
              <div class="header3-wrap">
@@ -312,8 +304,28 @@
                  </div>
              </div>
          </div>
-     </header>
- <div id="chartContainer" style="height: 370px; width: %;"></div>
+                                 </header>
+
+                                 <section class="statistic statistic2">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-6 col-lg-3">
+                             <div class="statistic__item statistic__item--orange">
+                                
+                                 <h2 class="number">
+                                     <?php echo $averagetemp; ?>
+                                 </h2>
+                                 <span class="desc"><a href="list_users.php">Average Temperature</a></span>
+                                 <div class="icon">
+                                     <i class="zmdi zmdi-account-o"></i>
+                                 </div>
+                             </div>
+                         </div>
+                                 </div>
+                                 </div>
+                                 </section>
+ <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
  </body>
  </html>   
