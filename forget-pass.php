@@ -43,7 +43,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src="images/icon/logo-mini.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">
@@ -52,7 +52,7 @@
                                     <label>Email Address</label>
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" name="resetpassword" type="submit">submit</button>
+                                <button class="au-btn au-btn--block au-btn--blue m-b-20" name="resetpassword" type="submit">submit</button>
                             </form>
                         </div>
                     </div>

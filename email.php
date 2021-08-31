@@ -83,6 +83,8 @@ include('authentication.php');
             }
 
         </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
     </head>
     <body>
     <div class="page-wrapper">
@@ -96,14 +98,14 @@ include('authentication.php');
              <div class="header3-wrap">
                  <div class="header__logo">
                      <a href="#">
-                         <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                         <img src="images/icon/logo-mini.png" alt="CoolAdmin" />
                      </a>
                  </div>
                  <div class="header__navbar">
                      <ul class="list-unstyled">
                          <li class="has-sub">
-                             <a href="#">
-                                 <i class="fas fa-tachometer-alt"></i>Dashboard
+                             <a href="dashboard.php">
+                                 <i class="fas fa-tachometer-alt"></i>HOME
                                  <span class="bot-line"></span>
                              </a>
                              
@@ -160,101 +162,27 @@ include('authentication.php');
                      </ul>
                  </div>
                  <div class="header__tool">
-                     <div class="header-button-item has-noti js-item-menu">
-                         <i class="zmdi zmdi-notifications"></i>
-                         <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
-                             <div class="notifi__title">
-                                 <p>You have 3 Notifications</p>
-                             </div>
-                             <div class="notifi__item">
-                                 <div class="bg-c1 img-cir img-40">
-                                     <i class="zmdi zmdi-email-open"></i>
-                                 </div>
-                                 <div class="content">
-                                     <p>You got a email notification</p>
-                                     <span class="date">April 12, 2018 06:50</span>
-                                 </div>
-                             </div>
-                             <div class="notifi__item">
-                                 <div class="bg-c2 img-cir img-40">
-                                     <i class="zmdi zmdi-account-box"></i>
-                                 </div>
-                                 <div class="content">
-                                     <p>Your account has been blocked</p>
-                                     <span class="date">April 12, 2018 06:50</span>
-                                 </div>
-                             </div>
-                             <div class="notifi__item">
-                                 <div class="bg-c3 img-cir img-40">
-                                     <i class="zmdi zmdi-file-text"></i>
-                                 </div>
-                                 <div class="content">
-                                     <p>You got a new file</p>
-                                     <span class="date">April 12, 2018 06:50</span>
-                                 </div>
-                             </div>
-                             <div class="notifi__footer">
-                                 <a href="#">All notifications</a>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="header-button-item js-item-menu">
-                         <i class="zmdi zmdi-settings"></i>
-                         <div class="setting-dropdown js-dropdown">
-                             <div class="account-dropdown__body">
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-account"></i>Account</a>
-                                 </div>
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-settings"></i>Setting</a>
-                                 </div>
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                 </div>
-                             </div>
-                             <div class="account-dropdown__body">
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-globe"></i>Language</a>
-                                 </div>
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-pin"></i>Location</a>
-                                 </div>
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-email"></i>Email</a>
-                                 </div>
-                                 <div class="account-dropdown__item">
-                                     <a href="#">
-                                         <i class="zmdi zmdi-notifications"></i>Notifications</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
+                     
                      <div class="account-wrap">
                          <div class="account-item account-item--style2 clearfix js-item-menu">
                              <div class="image">
-                                 <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                 <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                              </div>
                              <div class="content">
-                                 <a class="js-acc-btn" href="#">john doe</a>
+                                 <a class="js-acc-btn" href="#">Jane</a>
                              </div>
                              <div class="account-dropdown js-dropdown">
                                  <div class="info clearfix">
                                      <div class="image">
                                          <a href="#">
-                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                             <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                          </a>
                                      </div>
                                      <div class="content">
                                          <h5 class="name">
-                                             <a href="#">john doe</a>
+                                             <a href="#">Jane</a>
                                          </h5>
-                                         <span class="email">johndoe@example.com</span>
+                                         <span class="email">jane@gmail.com</span>
                                      </div>
                                  </div>
                                  <div class="account-dropdown__body">
@@ -287,101 +215,29 @@ include('authentication.php');
      </header>
      <div class="sub-header-mobile-2 d-block d-lg-none">
          <div class="header__tool">
-             <div class="header-button-item has-noti js-item-menu">
-                 <i class="zmdi zmdi-notifications"></i>
-                 <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
-                     <div class="notifi__title">
-                         <p>You have 3 Notifications</p>
-                     </div>
-                     <div class="notifi__item">
-                         <div class="bg-c1 img-cir img-40">
-                             <i class="zmdi zmdi-email-open"></i>
-                         </div>
-                         <div class="content">
-                             <p>You got a email notification</p>
-                             <span class="date">April 12, 2018 06:50</span>
-                         </div>
-                     </div>
-                     <div class="notifi__item">
-                         <div class="bg-c2 img-cir img-40">
-                             <i class="zmdi zmdi-account-box"></i>
-                         </div>
-                         <div class="content">
-                             <p>Your account has been blocked</p>
-                             <span class="date">April 12, 2018 06:50</span>
-                         </div>
-                     </div>
-                     <div class="notifi__item">
-                         <div class="bg-c3 img-cir img-40">
-                             <i class="zmdi zmdi-file-text"></i>
-                         </div>
-                         <div class="content">
-                             <p>You got a new file</p>
-                             <span class="date">April 12, 2018 06:50</span>
-                         </div>
-                     </div>
-                     <div class="notifi__footer">
-                         <a href="#">All notifications</a>
-                     </div>
-                 </div>
-             </div>
-             <div class="header-button-item js-item-menu">
-                 <i class="zmdi zmdi-settings"></i>
-                 <div class="setting-dropdown js-dropdown">
-                     <div class="account-dropdown__body">
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-account"></i>Account</a>
-                         </div>
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-settings"></i>Setting</a>
-                         </div>
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-money-box"></i>Billing</a>
-                         </div>
-                     </div>
-                     <div class="account-dropdown__body">
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-globe"></i>Language</a>
-                         </div>
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-pin"></i>Location</a>
-                         </div>
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-email"></i>Email</a>
-                         </div>
-                         <div class="account-dropdown__item">
-                             <a href="#">
-                                 <i class="zmdi zmdi-notifications"></i>Notifications</a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
+
+            
+             
              <div class="account-wrap">
                  <div class="account-item account-item--style2 clearfix js-item-menu">
                      <div class="image">
-                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                         <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                      </div>
                      <div class="content">
-                         <a class="js-acc-btn" href="#">john doe</a>
+                         <a class="js-acc-btn" href="#">Jane</a>
                      </div>
                      <div class="account-dropdown js-dropdown">
                          <div class="info clearfix">
                              <div class="image">
                                  <a href="#">
-                                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                     <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                  </a>
                              </div>
                              <div class="content">
                                  <h5 class="name">
-                                     <a href="#">john doe</a>
+                                     <a href="#">Jane</a>
                                  </h5>
-                                 <span class="email">johndoe@example.com</span>
+                                 <span class="email">jane@gmail.com</span>
                              </div>
                          </div>
                          <div class="account-dropdown__body">
@@ -422,7 +278,7 @@ include('authentication.php');
                              <table id="myTable" class="table table-data2">
                                      <thead>
                                          <tr>
-                                             <th> <input type="checkbox" id="mcheck">check all</th>
+                                             <th>SELECT</th>
                                              
                                              <th></th>
                                              <th>Fullname</th>
@@ -524,8 +380,11 @@ include('authentication.php');
         <script src="main.js" type="text/javascript"></script>
       
 
-        <form action="" method="post" class="msg_container">
-            <h4>Compose Email</h4>
+       <form action="" method="post" class="msg_container">
+       <div id="welcomeDiv"  style="display:none;" class="answer_list" >
+       
+            <!-- <h4 >Compose Email</h4> -->
+
             <p id="multi-responce"></p>
             <div class="form-group">
                 <textarea class="form-control" id="emails" name="emails" placeholder="Email list" style="height: 120px;"></textarea>
@@ -538,6 +397,11 @@ include('authentication.php');
             </div>
             <button type="button" onclick="multi_email();" class="btn btn-primary btn-lg col-lg-12" id="send">Send Now </button>
 
+        
+        </div>
+       
+       <button type="button" class="btn btn-primary btn-lg col-lg-12" value="Show Div" onclick="showDiv()">COMPOSE EMAIL</button>
+       
         </form>
         <script src="js/main.js"></script>
  <script>

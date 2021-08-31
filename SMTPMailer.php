@@ -28,7 +28,7 @@ $phpmailer->SMTPAuth = true;
 $phpmailer->Port = 2525;
 $phpmailer->Username = '34c8277f707db4';
 $phpmailer->Password = '81c20153154124';
-$phpmailer->From="olyviah.amwoma@strathmore.edu";
+$phpmailer->From="gichukicynthia1@gmail.com";
         return $phpmailer;
 
        
