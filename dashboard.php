@@ -93,7 +93,7 @@
                  <div class="header3-wrap">
                      <div class="header__logo">
                          <a href="#">
-                             <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                             <img src="images/icon/logo-mini.png" alt="CoolAdmin" />
                          </a>
                      </div>
                      <div class="header__navbar">
@@ -103,6 +103,42 @@
 						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
 						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
 						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
+                        <li><a href="email.php"> <i class="fas  fa-copy"> </i>SEND EMAIL</a> </li>
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-desktop"></i>
+                                 <span class="bot-line"></span>Graphs</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="taste.php">Graph-Taste</a>
+                                 </li>
+                                 <li>
+                                     <a href="sorethroat.php">Graph-SoreThroat</a>
+                                 </li>
+                                 <li>
+                                     <a href="headache.php">Headache-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="aches.php">Aches-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="fatigue.php">Fatigue-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="drycough.php">DryCough-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="contactgraph.php">Contact with +ve Case</a>
+                                 </li>
+                                 <li>
+                                     <a href="fever.php">Fever Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="temperaturegraph.php">Temperature Graph</a>
+                                 </li>
+                                 
+                             </ul>
+                         </li>
 					</ul>
                              <!-- <li class="has-sub"> -->
                                  <!-- <a href="#">
@@ -192,8 +228,11 @@
                              <!-- </li> -->
                         
                      </div>
+
+                     
                      <div class="header__tool">
-                         <div class="header-button-item has-noti js-item-menu">
+                         //
+                         <!-- <div class="header-button-item has-noti js-item-menu">
                              <i class="zmdi zmdi-notifications"></i>
                              <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
                                  <div class="notifi__title">
@@ -230,8 +269,8 @@
                                      <a href="#">All notifications</a>
                                  </div>
                              </div>
-                         </div>
-                         <div class="header-button-item js-item-menu">
+                         </div> -->
+                         <!-- <div class="header-button-item js-item-menu">
                              <i class="zmdi zmdi-settings"></i>
                              <div class="setting-dropdown js-dropdown">
                                  <div class="account-dropdown__body">
@@ -267,27 +306,27 @@
                                      </div>
                                  </div>
                              </div>
-                         </div>
+                         </div> -->
                          <div class="account-wrap">
                              <div class="account-item account-item--style2 clearfix js-item-menu">
                                  <div class="image">
-                                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                     <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                  </div>
                                  <div class="content">
-                                     <a class="js-acc-btn" href="#">john doe</a>
+                                     <a class="js-acc-btn" href="#">Jane</a>
                                  </div>
                                  <div class="account-dropdown js-dropdown">
                                      <div class="info clearfix">
                                          <div class="image">
                                              <a href="#">
-                                                 <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                 <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                              </a>
                                          </div>
                                          <div class="content">
                                              <h5 class="name">
-                                                 <a href="#">john doe</a>
+                                                 <a href="#">Jane</a>
                                              </h5>
-                                             <span class="email">johndoe@example.com</span>
+                                             <span class="email">jane@gmail.com</span>
                                          </div>
                                      </div>
                                      <div class="account-dropdown__body">
@@ -515,23 +554,23 @@
                  <div class="account-wrap">
                      <div class="account-item account-item--style2 clearfix js-item-menu">
                          <div class="image">
-                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                             <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                          </div>
                          <div class="content">
-                             <a class="js-acc-btn" href="#">john doe</a>
+                             <a class="js-acc-btn" href="#">Jane</a>
                          </div>
                          <div class="account-dropdown js-dropdown">
                              <div class="info clearfix">
                                  <div class="image">
                                      <a href="#">
-                                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                         <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                      </a>
                                  </div>
                                  <div class="content">
                                      <h5 class="name">
-                                         <a href="#">john doe</a>
+                                         <a href="#">Jane</a>
                                      </h5>
-                                     <span class="email">johndoe@example.com</span>
+                                     <span class="email">jane@gmail.com</span>
                                  </div>
                              </div>
                              <div class="account-dropdown__body">
@@ -683,284 +722,16 @@
                      </div>
                  </div>
              </section>
-             <!-- END STATISTIC-->
-             <section class="statistic-chart">
-                 <div class="reports">
-             <div class="dropdown">
-             <div class="col-md-12">
-             <h2 class="title-5 m-b-35">REPORTS</h2>
-                            </div>
-                            
-             <h3>FILTER BY</h3><br>
-
-  <button class="dropbtn">BUILDING</button>
-  <div class="dropdown-content">
-    <a href="stmb.php">STMB</a>
-    <a href="#">MSB</a>
-    <a href="#">PHASE-1</a>
-  </div>
-  </div>
-  &nbsp;
-  &nbsp;
-  &nbsp;
-  &nbsp;
-<div class="dropdown">
-  <button class="dropbtn">MONTH</button>
-  <div class="dropdown-content">
-    <a href="stmb.php">JANUARY</a>
-    <a href="#">FEBRUARY</a>
-    <a href="#">MARCH</a>
-    <a href="stmb.php">APRIL</a>
-    <a href="#">MAY</a>
-    <a href="#">JUNE</a>
-    <a href="stmb.php">JULY</a>
-    <a href="#">AUGUST</a>
-    <a href="#">SEPTEMBER</a>
-    <a href="stmb.php">OCTOBER</a>
-    <a href="#">NOVEMBER</a>
-    <a href="#">DECEMBER</a>
-  </div>
-</div>
-&nbsp;
-&nbsp;
-  &nbsp;
-  &nbsp;
-  &nbsp;
-<div class="dropdown">
-  <button class="dropbtn">DAY</button>
-  <div class="dropdown-content">
-    <a href="stmb.php">MONDAY</a>
-    <a href="#">TUESDAY</a>
-    <a href="#">WEDNESDAY</a>
-    <a href="stmb.php">THURSDAY</a>
-    <a href="#">FRIDAY</a>
-    <a href="#">SATURDAY</a>
-  </div>
-</div>
-&nbsp;
-  &nbsp;
-  &nbsp;
-
-&nbsp;
-  &nbsp;
-<div class="dropdown">
-  <button class="dropbtn"><input type="date" ></button>
-  
-</div>
-
-&nbsp;
-  &nbsp;
-  &nbsp;
-
-&nbsp;
-  &nbsp;
-<div class="dropdown">
-  <button class="dropbtn">TEMPERATURE</button>
-  <div class="dropdown-content">
-    <a href="stmb.php"></a>
-    <a href="#">>37.0</a>
-  </div>
-</div>
-                            </div>
-                            </section>
-
-             <!-- STATISTIC CHART-->
-             <section class="statistic-chart">
-                 <div class="container">
-                     
-                     <div class="row">
-                         <div class="col-md-12">
-
-                             <h2 class="title-5 m-b-35">STATISCTICS</h2>
-                     </div>
-                     <div class="row">
-                         
-                         <div class="col-md-6 col-lg-4">
-                             
-                             <!-- CHART-->
-                             <div id="chart-container">
-
-                             <!-- <canvas id= "lineChart" height="1000" width="400">
-                            </canvas>  -->
-                            <script>
-
-                            // const CHART = document.getElementById("lineChart");
-                            // console.log(CHART);
-                            // let lineChart = new Chart(CHART, {
-                            //     type:'line', 
-                            //     data:
-                            // });
-                            function getData(callbackIN) {
-    var ref = firebase.database().ref("scanning");
-        ref.once('temp').then(function (snapshot) {
-        callbackIN(snapshot.val())
-    });
-}
-
-
-window.addEventListener("load", getData(genFunction));
-
-function genFunction(data) {
-    var cdata = [];
-    var len = data.length;
-    for(var i=1; i<len; i++) {
-        cdata.push({
-        label: data[i]['date'],
-        value: data[i]['temp']
-    });
-}
-
-var firebaseChart = new FusionCharts({
-    type: 'area2d',
-    renderAt: 'chart-container',
-    width: '650',
-    height: '400',
-    dataFormat: 'json',
-    dataSource: {
-    "chart": {
-        "caption": "Students Temperature Trend",
-        "subCaption": "Last 7 Days",
-        "subCaptionFontBold": "0",
-        "captionFontSize": "20",
-        "subCaptionFontSize": "17",
-        "captionPadding": "15",
-        "captionFontColor": "#8C8C8C",
-        "baseFontSize": "14",
-        "baseFont": "Barlow",
-        "canvasBgAlpha": "0",
-        "bgColor": "#FFFFFF",
-        "bgAlpha": "100",
-        "showBorder": "0",
-        "showCanvasBorder": "0",
-        "showPlotBorder": "0",
-        "showAlternateHGridColor": "0",
-        "usePlotGradientColor": "0",
-        "paletteColors": "#6AC1A5",
-        "showValues": "0",
-        "divLineAlpha": "5",
-        "showAxisLines": "1",
-        "drawAnchors": "0",
-        "xAxisLineColor": "#8C8C8C",
-        "xAxisLineThickness": "0.7",
-        "xAxisLineAlpha": "50",
-        "yAxisLineColor": "#8C8C8C",
-        "yAxisLineThickness": "0.7",
-        "yAxisLineAlpha": "50",
-        "baseFontColor": "#8C8C8C",
-        "toolTipBgColor": "#FA8D67",
-        "toolTipPadding": "10",
-        "toolTipColor": "#FFFFFF",
-        "toolTipBorderRadius": "3",
-        "toolTipBorderAlpha": "0",
-        "drawCrossLine": "1",
-        "crossLineColor": "#8C8C8C",
-        "crossLineAlpha": "60",
-        "crossLineThickness": "0.7",
-        "alignCaptionWithCanvas": "1"
-    },
-
-    "scanning": cdata
-    }
-});
-firebaseChart.render();
-
-                            </script>
-                           
-                            
-                            </div>
-                           
-                                 
-                            
-
-
-                                 
-                                 <!-- <h3 class="title-3 m-b-30">chart</h3>
-                                 <div class="chart-wrap">
-                                     <canvas id="widgetChart5"></canvas>
-                                 </div>
-                                 <div class="statistic-chart-1-note">
-                                     <span class="big">STUDENT</span>
-                                     <span>LOGIN THIS WEEK</span>
-                                 </div>
-                             </div> -->
-                             <!-- END CHART-->
-                         </div>
-                         <div class="col-md-6 col-lg-4">
-                             <!-- TOP CAMPAIGN-->
-                             <div class="top-campaign">
-                                 <h3 class="title-3 m-b-30">Courses</h3>
-                                 <div class="table-responsive">
-                                     <table class="table table-top-campaign">
-                                         <tbody>
-                                             <tr>
-                                                 <td>1. ICS</td>
-                                                 <td>29.25%</td>
-                                             </tr>
-                                             <tr>
-                                                 <td>2. BBIT </td>
-                                                 <td>21.23%</td>
-                                             </tr>
-                                             <tr>
-                                                 <td>3. BTC</td>
-                                                 <td>19.78%</td>
-                                             </tr>
-                                             <tr>
-                                                 <td>4. Electrical </td>
-                                                 <td>18.45%</td>
-                                             </tr>
-                                             <tr>
-                                                 <td>5. DBIT</td>
-                                                 <td>11.29%</td>
-
-                                                 <!-- <td>6. LAW</td>
-                                                 <td></td> -->
-
-                                                 <!--
-
-                                                 <td>7. School of Tourism and Hospitality</td>
-                                                 <td></td> -->
-                                             </tr>
-                                         </tbody>
-                                     </table>
-                                 </div>
-                             </div>
-                             <!-- END TOP CAMPAIGN-->
-                         </div>
-                         <div class="col-md-6 col-lg-4">
-                             <!-- CHART PERCENT-->
-                             <div class="chart-percent-2">
-                                 <h3 class="title-3 m-b-30">chart by %</h3>
-                                 <div class="chart-wrap">
-                                     <canvas id="percent-chart2"></canvas>
-                                     <div id="chartjs-tooltip">
-                                         <table></table>
-                                     </div>
-                                 </div>
-                                 <div class="chart-info">
-                                     <div class="chart-note">
-                                         <span class="dot dot--blue"></span>
-                                         <span>Full-Time</span>
-                                     </div>
-                                     <div class="chart-note">
-                                         <span class="dot dot--red"></span>
-                                         <span>Evening</span>
-                                     </div>
-                                 </div>
-                             </div>
-                             <!-- END CHART PERCENT-->
-                         </div>
-                     </div>
-                 </div>
-             </section>
-             <!-- END STATISTIC CHART-->
+            
 
              <!-- DATA TABLE-->
              <section class="p-t-20">
                  <div class="container">
                      <div class="row">
                          <div class="col-md-12">
-                             <h3 class="title-5 m-b-35">data table</h3>
-                             <div class="table-data__tool">
+                             <h3 class="title-5 m-b-35">registered users data table</h3>
+
+                             <!-- <div class="table-data__tool">
                                  <div class="table-data__tool-left">
                                      <div class="rs-select2--light rs-select2--md">
                                          <select class="js-select2" name="property">
@@ -993,7 +764,7 @@ firebaseChart.render();
                                          <div class="dropDownSelect2"></div>
                                      </div>
                                  </div>
-                             </div>
+                             </div> -->
                              <div class="table-responsive table-responsive-data2">
                                  <table class="table table-data2">
                                      <thead>

@@ -56,7 +56,7 @@ include('authentication.php');
              <div class="header3-wrap">
                  <div class="header__logo">
                      <a href="#">
-                         <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                         <img src="images/icon/logo-mini.png" alt="CoolAdmin" />
                      </a>
                  </div>
                  <div class="header__navbar">
@@ -119,8 +119,10 @@ include('authentication.php');
                          </li>
                      </ul>
                  </div>
+                 
                  <div class="header__tool">
-                     <div class="header-button-item has-noti js-item-menu">
+
+                     <!-- <div class="header-button-item has-noti js-item-menu">
                          <i class="zmdi zmdi-notifications"></i>
                          <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
                              <div class="notifi__title">
@@ -157,8 +159,8 @@ include('authentication.php');
                                  <a href="#">All notifications</a>
                              </div>
                          </div>
-                     </div>
-                     <div class="header-button-item js-item-menu">
+                     </div> -->
+                     <!-- <div class="header-button-item js-item-menu">
                          <i class="zmdi zmdi-settings"></i>
                          <div class="setting-dropdown js-dropdown">
                              <div class="account-dropdown__body">
@@ -194,27 +196,27 @@ include('authentication.php');
                                  </div>
                              </div>
                          </div>
-                     </div>
+                     </div> -->
                      <div class="account-wrap">
                          <div class="account-item account-item--style2 clearfix js-item-menu">
                              <div class="image">
-                                 <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                 <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                              </div>
                              <div class="content">
-                                 <a class="js-acc-btn" href="#">john doe</a>
+                                 <a class="js-acc-btn" href="#">Jane</a>
                              </div>
                              <div class="account-dropdown js-dropdown">
                                  <div class="info clearfix">
                                      <div class="image">
                                          <a href="#">
-                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                             <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                          </a>
                                      </div>
                                      <div class="content">
                                          <h5 class="name">
-                                             <a href="#">john doe</a>
+                                             <a href="#">Jane</a>
                                          </h5>
-                                         <span class="email">johndoe@example.com</span>
+                                         <span class="email">jane@gmail.com</span>
                                      </div>
                                  </div>
                                  <div class="account-dropdown__body">
@@ -325,23 +327,23 @@ include('authentication.php');
              <div class="account-wrap">
                  <div class="account-item account-item--style2 clearfix js-item-menu">
                      <div class="image">
-                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                         <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                      </div>
                      <div class="content">
-                         <a class="js-acc-btn" href="#">john doe</a>
+                         <a class="js-acc-btn" href="#">Jane</a>
                      </div>
                      <div class="account-dropdown js-dropdown">
                          <div class="info clearfix">
                              <div class="image">
                                  <a href="#">
-                                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                     <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                  </a>
                              </div>
                              <div class="content">
                                  <h5 class="name">
-                                     <a href="#">john doe</a>
+                                     <a href="#">Jane</a>
                                  </h5>
-                                 <span class="email">johndoe@example.com</span>
+                                 <span class="email">jane@gmail.com</span>
                              </div>
                          </div>
                          <div class="account-dropdown__body">
@@ -380,8 +382,9 @@ include('authentication.php');
              <div class="container">
                  <div class="row">
                      <div class="col-md-12">
-                         <h3 class="title-5 m-b-35">data table</h3>
-                         <div class="table-data__tool">
+                         <h3 class="title-5 m-b-35">screening data table</h3>
+
+                         <!-- <div class="table-data__tool">
                              <div class="table-data__tool-left">
                                  <div class="rs-select2--light rs-select2--md">
                                      <select class="js-select2" name="property">
@@ -414,7 +417,7 @@ include('authentication.php');
                                      <div class="dropDownSelect2"></div>
                                  </div>
                              </div>
-                         </div>
+                         </div> -->
                          <div class="table-responsive table-responsive-data2">
                              <?php
                                 if (isset($_SESSION['status'])) {
@@ -548,7 +551,7 @@ include('authentication.php');
          <!-- END DATA TABLE-->
 
          <!-- COPYRIGHT-->
-         <section class="p-t-60 p-b-20">
+         <!-- <section class="p-t-60 p-b-20">
              <div class="container">
                  <div class="row">
                      <div class="col-md-12">
@@ -559,7 +562,7 @@ include('authentication.php');
                      </div>
                  </div>
              </div>
-         </section>
+         </section> -->
          <!-- END COPYRIGHT-->
      </div>
 

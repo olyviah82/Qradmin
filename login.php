@@ -51,7 +51,8 @@ if (isset($_SESSION['verified_user_id'])) {
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <h3> SIGN IN:</h3>
+                                <img src="images/icon/logo-mini.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <?php
@@ -80,15 +81,15 @@ if (isset($_SESSION['verified_user_id'])) {
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" name="login_btn"
+                                <button class="au-btn au-btn--block au-btn--blue m-b-20" name="login_btn"
                                     type="submit">sign in</button>
-                                <div class="social-login-content">
+                                <!-- <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with
                                             facebook</button>
                                         <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                             <div class="register-link">
                                 <p>

@@ -67,3 +67,6 @@ function email_loop(emails) {
 
     return email;
 }
+function showDiv() {
+    document.getElementById('welcomeDiv').style.display = "block";
+ }
