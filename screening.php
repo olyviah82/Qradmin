@@ -19,7 +19,7 @@ include('authentication.php');
  <meta name="keywords" content="au theme template">
 
  <!-- Title Page-->
- <title>Dashboard 3</title>
+ <title>Screening</title>
 
  <!-- Fontfaces CSS-->
  <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -60,19 +60,14 @@ include('authentication.php');
                      </a>
                  </div>
                  <div class="header__navbar">
-                     <ul class="list-unstyled">
-                         <li class="has-sub">
-                             <a href="#">
-                                 <i class="fas fa-tachometer-alt"></i>Dashboard
-                                 <span class="bot-line"></span>
-                             </a>
-                             
-                         </li>
-                         
-                         <li class="has-sub">
+
+                 <ul>
+                         <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
+                        
+                        <li class="has-sub">
                              <a href="#">
                                  <i class="fas fa-copy"></i>
-                                 <span class="bot-line"></span>Actions</a>
+                                 <span class="bot-line"></span>ACTIONS</a>
                              <ul class="header3-sub-list list-unstyled">
                                  <li>
                                      <a href="login.php">Login</a>
@@ -81,21 +76,23 @@ include('authentication.php');
                                      <a href="register.php">Register</a>
                                  </li>
                                  <li>
-                                     <a href="forget-pass.html">Forget Password</a>
+                                     <a href="list_users.php">Edit Users</a>
                                  </li>
                                  <li>
-                                     <a href="screening.php">Screening</a>
+                                     <a href="confirm.php">View Confirmed Students</a>
                                  </li>
+                                 <li>
+                                     <a href="screening.php">View Screening Details</a>
+                                 </li>
+                                
                              </ul>
                          </li>
-                         <li class="has-sub">
+                         <li><a href="email.php"> <i class="fas  fa-copy"> </i>CONTACT TRACING</a> </li>
+                        <li class="has-sub">
                              <a href="#">
                                  <i class="fas fa-desktop"></i>
-                                 <span class="bot-line"></span>Graphs</a>
+                                 <span class="bot-line"></span>GRAPHS</a>
                              <ul class="header3-sub-list list-unstyled">
-                             <li>
-                                     <a href="contactgraph.php">Graph-Contact</a>
-                                 </li>
                                  <li>
                                      <a href="taste.php">Graph-Taste</a>
                                  </li>
@@ -114,10 +111,20 @@ include('authentication.php');
                                  <li>
                                      <a href="drycough.php">DryCough-Graph</a>
                                  </li>
+                                 <li>
+                                     <a href="contactgraph.php">Contact with +ve Case</a>
+                                 </li>
+                                 <li>
+                                     <a href="fever.php">Fever Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="temperaturegraph.php">Temperature Graph</a>
+                                 </li>
                                  
                              </ul>
                          </li>
-                     </ul>
+					</ul>
+
                  </div>
                  
                  <div class="header__tool">

@@ -55,10 +55,67 @@
                      <div class="header__navbar">
 
                      <ul>
-                     <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
-						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
-						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
-						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
+                         <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
+                        
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-copy"></i>
+                                 <span class="bot-line"></span>ACTIONS</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="login.php">Login</a>
+                                 </li>
+                                 <li>
+                                     <a href="register.php">Register</a>
+                                 </li>
+                                 <li>
+                                     <a href="list_users.php">Edit Users</a>
+                                 </li>
+                                 <li>
+                                     <a href="confirm.php">View Confirmed Students</a>
+                                 </li>
+                                 <li>
+                                     <a href="screening.php">View Screening Details</a>
+                                 </li>
+                                
+                             </ul>
+                         </li>
+                         <li><a href="email.php"> <i class="fas  fa-copy"> </i>CONTACT TRACING</a> </li>
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-desktop"></i>
+                                 <span class="bot-line"></span>GRAPHS</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="taste.php">Graph-Taste</a>
+                                 </li>
+                                 <li>
+                                     <a href="sorethroat.php">Graph-SoreThroat</a>
+                                 </li>
+                                 <li>
+                                     <a href="headache.php">Headache-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="aches.php">Aches-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="fatigue.php">Fatigue-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="drycough.php">DryCough-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="contactgraph.php">Contact with +ve Case</a>
+                                 </li>
+                                 <li>
+                                     <a href="fever.php">Fever Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="temperaturegraph.php">Temperature Graph</a>
+                                 </li>
+                                 
+                             </ul>
+                         </li>
 					</ul>
                          <!-- <ul class="list-unstyled">
                              <li class="has-sub">
@@ -575,12 +632,7 @@
                                  <table class="table table-data2">
                                      <thead>
                                          <tr>
-                                             <th>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </th>
+                                             
                                              <th>si.NO</th>
                                              <th>Fullname</th>
                                              <th>Email Address</th>
@@ -588,7 +640,7 @@
                                              <th>Role</th>
                                              <th>Enable/Disable</th>
                                              <th>Edit</th>
-                                             <th>Delete</th>
+                                             
                                              <th></th>
                                          </tr>
                                      </thead>
@@ -606,25 +658,19 @@
                                             ?>
                                          <tr class="spacer"></tr>
                                          <tr class="tr-shadow">
-                                             <td>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </td>
+                                             
                                              <td><?= $i++; ?></td>
                                              <td> <span class="block-email"><?= $user->displayName; ?></span></td>
                                              <td class="desc"><?= $user->email; ?></td>
                                              <td><span class="block-email"><?= $user->phoneNumber; ?></span></td>
-                                             < <td>
+                                             <td>
 
                                                  <span class="block-email">
                                                      <?php
                                                             $claims = $auth->getUser($user->uid)->customClaims;
                                                             if (isset($claims['admin']) == true) {
                                                                 echo "Admin";
-                                                            } elseif (isset($claims['super_admin']) == true) {
-                                                                echo "Super Admin";
+                                                           
                                                             } elseif ($claims == null) {
                                                                 echo "User";
                                                             }
@@ -654,15 +700,7 @@
                                                                  data-toggle="tooltip" data-placement="top"
                                                                  Class="item"><i class="zmdi zmdi-edit"></i>Edit </a>
                                                          </td>
-                                                         <td>
-                                                             <form method="POST" action="code.php">
-                                                                 <button class="item" type="submit" name="delete_user"
-                                                                     value="<?= $user->uid; ?>">Delete</button>
-
-
-                                                             </form>
-
-                                                         </td>
+                                                        
                                          </tr>
                                          <?php
                                             }
@@ -682,7 +720,7 @@
 
 
 
-                                         ?>
+                                       
                                      </tbody>
 
                                  </table>
