@@ -183,6 +183,9 @@ $averagetemp=$total/$totalcount;
                                  <li>
                                      <a href="temperaturegraph.php">Temperature Graph</a>
                                  </li>
+                                 <li>
+                                     <a href="covidstatus.php">status Graph</a>
+                                 </li>
                                  
                              </ul>
                          </li>

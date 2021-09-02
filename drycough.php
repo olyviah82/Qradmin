@@ -183,6 +183,9 @@
                                      <a href="drycough.php">DryCough-Graph</a>
                                  </li>
                                  <li>
+                                     <a href="covidstatus.php">status Graph</a>
+                                 </li>
+                                 <li>
                                      <a href="contactgraph.php">Contact with +ve Case</a>
                                  </li>
                                  <li>
