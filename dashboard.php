@@ -157,6 +157,9 @@
                                  <li>
                                      <a href="temperaturegraph.php">Temperature Graph</a>
                                  </li>
+                                 <li>
+                                     <a href="covidstatus.php">Status Graph</a>
+                                 </li>
                                  
                              </ul>
                          </li>
