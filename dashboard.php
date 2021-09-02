@@ -100,14 +100,35 @@
                          
                          <ul>
                          <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
-						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
-						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
-						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
-                        <li><a href="email.php"> <i class="fas  fa-copy"> </i>SEND EMAIL</a> </li>
+                        
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-copy"></i>
+                                 <span class="bot-line"></span>ACTIONS</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="login.php">Login</a>
+                                 </li>
+                                 <li>
+                                     <a href="register.php">Register</a>
+                                 </li>
+                                 <li>
+                                     <a href="list_users.php">Edit Users</a>
+                                 </li>
+                                 <li>
+                                     <a href="confirm.php">View Confirmed Students</a>
+                                 </li>
+                                 <li>
+                                     <a href="screening.php">View Screening Details</a>
+                                 </li>
+                                
+                             </ul>
+                         </li>
+                         <li><a href="email.php"> <i class="fas  fa-copy"> </i>CONTACT TRACING</a> </li>
                         <li class="has-sub">
                              <a href="#">
                                  <i class="fas fa-desktop"></i>
-                                 <span class="bot-line"></span>Graphs</a>
+                                 <span class="bot-line"></span>GRAPHS</a>
                              <ul class="header3-sub-list list-unstyled">
                                  <li>
                                      <a href="taste.php">Graph-Taste</a>
@@ -621,13 +642,7 @@
                                          <li class="list-inline-item">Dashboard</li>
                                      </ul>
                                  </div>
-                                 <form class="au-form-icon--sm" action="" method="post">
-                                     <input class="au-input--w300 au-input--style2" type="text"
-                                         placeholder="Search for datas &amp; reports...">
-                                     <button class="au-btn--submit2" type="submit">
-                                         <i class="zmdi zmdi-search"></i>
-                                     </button>
-                                 </form>
+                                 
                              </div>
                          </div>
                      </div>
@@ -769,19 +784,14 @@
                                  <table class="table table-data2">
                                      <thead>
                                          <tr>
-                                             <th>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </th>
+                                             
                                              <th>si.NO</th>
-                                             <th>Fullname</th>
                                              <th>Email Address</th>
+                                             <th>Full Name</th>
                                              <th>Phone Number</th>
-                                             <th>Enable/Disable</th>
                                              <th>Edit</th>
-                                             <th>Delete</th>
+                                             <th>Enable/Disable</th>
+                                             
                                              <th></th>
                                          </tr>
                                      </thead>
@@ -801,12 +811,7 @@
                                             ?>
                                          <tr class="spacer"></tr>
                                          <tr class="tr-shadow">
-                                             <td>
-                                                 <label class="au-checkbox">
-                                                     <input type="checkbox">
-                                                     <span class="au-checkmark"></span>
-                                                 </label>
-                                             </td>
+                                             
 
                                              <td><?= $i++; ?></td>
                                              <td> <span class="block-email"><?= $row['email']; ?></span></td>
@@ -814,21 +819,17 @@
                                              <td class="desc"><?= $row['phonenumber']; ?></td>
                                              <td>
 
-                                                 <a href="EditUsers.php?id=<?= $key; ?>" data-toggle="tooltip"
+                                                 <a href="user_edit.php?id=<?= $key; ?>" data-toggle="tooltip"
                                                      data-placement="top" Class="item"><i
                                                          class="zmdi zmdi-edit"></i>Edit </a>
                                              </td>
                                              <td>
 
-                                                 <a href="EditUsers.php?id=<?= $key; ?>" data-toggle="tooltip"
+                                                 <a href="user_edit.php?id=<?= $key; ?>" data-toggle="tooltip"
                                                      data-placement="top" Class="item"><i
                                                          class="zmdi zmdi-edit"></i>Enable/Disable </a>
                                              </td>
-                                             <td>
-
-                                                 <a href="DeleteUsers.php" data-toggle="tooltip" data-placement="top"
-                                                     Class="item"><i class="zmdi zmdi-delete"></i></i>Delete </a>
-                                             </td>
+                                            
                                          </tr>
 
                                          <?php

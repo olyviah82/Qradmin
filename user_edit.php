@@ -49,15 +49,71 @@ include('authentication.php')
                 <div class="header3-wrap">
                     <div class="header__logo">
                         <a href="#">
-                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo-mini.png" alt="CoolAdmin" />
                         </a>
                     </div>
                     <div class="header__navbar">
                     <ul>
-                    <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
-						<li><a href="login.php">  <i class="fas fa-copy"> </i>LOG IN</a></li>
-						<li><a href="register.php"> <i class="fas  fa-copy"> </i>REGISTER </a></li>
-						<li><a href="forget-pass.php"> <i class="fas  fa-copy"> </i>FORGORT PASSWORD</a> </li>
+                         <li><a href="dashboard.php">  <i class="fas fa-copy"> </i>HOME</a></li>
+                        
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-copy"></i>
+                                 <span class="bot-line"></span>ACTIONS</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="login.php">Login</a>
+                                 </li>
+                                 <li>
+                                     <a href="register.php">Register</a>
+                                 </li>
+                                 <li>
+                                     <a href="list_users.php">Registered Users</a>
+                                 </li>
+                                 <li>
+                                     <a href="confirm.php">Confirmed Students</a>
+                                 </li>
+                                 <li>
+                                     <a href="screening.php">Screening Details</a>
+                                 </li>
+                             </ul>
+                         </li>
+                         <li><a href="email.php"> <i class="fas  fa-copy"> </i>SEND EMAIL</a> </li>
+                        <li class="has-sub">
+                             <a href="#">
+                                 <i class="fas fa-desktop"></i>
+                                 <span class="bot-line"></span>GRAPHS</a>
+                             <ul class="header3-sub-list list-unstyled">
+                                 <li>
+                                     <a href="taste.php">Graph-Taste</a>
+                                 </li>
+                                 <li>
+                                     <a href="sorethroat.php">Graph-SoreThroat</a>
+                                 </li>
+                                 <li>
+                                     <a href="headache.php">Headache-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="aches.php">Aches-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="fatigue.php">Fatigue-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="drycough.php">DryCough-Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="contactgraph.php">Contact with +ve Case</a>
+                                 </li>
+                                 <li>
+                                     <a href="fever.php">Fever Graph</a>
+                                 </li>
+                                 <li>
+                                     <a href="temperaturegraph.php">Temperature Graph</a>
+                                 </li>
+                                 
+                             </ul>
+                         </li>
 					</ul>
                         <!-- <ul class="list-unstyled">
                             <li class="has-sub">
@@ -149,101 +205,29 @@ include('authentication.php')
                         </ul> -->
                     </div>
                     <div class="header__tool">
-                        <div class="header-button-item has-noti js-item-menu">
-                            <i class="zmdi zmdi-notifications"></i>
-                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
-                                <div class="notifi__title">
-                                    <p>You have 3 Notifications</p>
-                                </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c1 img-cir img-40">
-                                        <i class="zmdi zmdi-email-open"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p>You got a email notification</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c2 img-cir img-40">
-                                        <i class="zmdi zmdi-account-box"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p>Your account has been blocked</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c3 img-cir img-40">
-                                        <i class="zmdi zmdi-file-text"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p>You got a new file</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
-                                <div class="notifi__footer">
-                                    <a href="#">All notifications</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-button-item js-item-menu">
-                            <i class="zmdi zmdi-settings"></i>
-                            <div class="setting-dropdown js-dropdown">
-                                <div class="account-dropdown__body">
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-account"></i>Account</a>
-                                    </div>
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-settings"></i>Setting</a>
-                                    </div>
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                    </div>
-                                </div>
-                                <div class="account-dropdown__body">
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-globe"></i>Language</a>
-                                    </div>
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-pin"></i>Location</a>
-                                    </div>
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-email"></i>Email</a>
-                                    </div>
-                                    <div class="account-dropdown__item">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-notifications"></i>Notifications</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        
+                        
                         <div class="account-wrap">
                             <div class="account-item account-item--style2 clearfix js-item-menu">
                                 <div class="image">
-                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                 </div>
                                 <div class="content">
-                                    <a class="js-acc-btn" href="#">john doe</a>
+                                    <a class="js-acc-btn" href="#">Jane</a>
                                 </div>
                                 <div class="account-dropdown js-dropdown">
                                     <div class="info clearfix">
                                         <div class="image">
                                             <a href="#">
-                                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                <img src="images/icon/avatar-02.jpg" alt="John Doe" />
                                             </a>
                                         </div>
                                         <div class="content">
                                             <h5 class="name">
-                                                <a href="#">john doe</a>
+                                                <a href="#">Jane</a>
                                             </h5>
-                                            <span class="email">johndoe@example.com</span>
+                                            <span class="email">jane@gmail.com</span>
                                         </div>
                                     </div>
                                     <div class="account-dropdown__body">
@@ -696,11 +680,10 @@ include('authentication.php')
                                         <select name="role_as" class="form-control" id="">
                                             <option value="">Select Roles</option>
                                             <option value="admin">Admin</option>
-                                            <option value="super_admin">Super Admin</option>
-                                            <option value="norole">Remove Role</option>
+                                            <option value="norole">User</option>
                                         </select>
                                     </div>
-                                    <label for="">Currentlyt:user role is </label>
+                                    <!-- <label for="">Currentlyt:user role is </label> -->
 
                                     <h4 class="border bg-warning p-2">
                                         <?php
@@ -709,8 +692,8 @@ include('authentication.php')
                                                 echo "Role :Admin";
                                             } elseif (isset($claims['super_admin']) == true) {
                                                 echo "Role :Super Admin";
-                                            } elseif ($claims == null) {
-                                                echo "Role :No role";
+                                            // } elseif ($claims == null) {
+                                            //     echo "R";
                                             }
                                             ?>
                                     </h4>
